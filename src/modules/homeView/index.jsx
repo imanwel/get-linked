@@ -422,18 +422,18 @@ export default function HomeView() {
         addClassname={"border-y md:flex-row-reverse justify-end relative"}
         image={privacy}
         extraImage={
-          <div className="absolute w-[65%] bottom-[42%] right-[13%]">
+          <div className="relative bottom-[15%]">
             <img src={privacyShield} alt="" />
           </div>
         }
         extraImgClass={""}
-        imageDiv={"flex-col relative top-[45px] items-center"}
-        imageClass={"relative w-[70%]"}
-        heading={"Privacy Poliicy and"}
+        imageDiv={"relative flex-col items-center"}
+        imageClass={"absolute bottom-0 left-0 w-[90%]"}
+        heading={"Privacy Policy and"}
         spanHead={"Terms"}
-        titleClass={"border"}
+        titleClass={""}
         textContent={
-          <div className="flex flex-col gap-8 border">
+          <div className="flex flex-col gap-8">
             <p>
               At getlinked tech Hackathon 1.0, we value your privacy and are
               committed to protecting your personal information. This Privacy
@@ -443,9 +443,9 @@ export default function HomeView() {
               in this policy.
             </p>
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-7">
               <div className="">
-                <h3 className="">Licensing Policy</h3>
+                <h3 className="font-bold text-pink-500">Licensing Policy</h3>
                 <p className="">Here are terms of our Standard License:</p>
               </div>
 
@@ -468,14 +468,19 @@ export default function HomeView() {
               </ul>
             </div>
 
-            <ClickButton
-              message={"Read more"}
-              buttonLocation={""}
-              className={"justify-center"}
-            />
+            <div className="button flex justify-center">
+              {" "}
+              <ClickButton
+                message={"Read more"}
+                buttonLocation={""}
+                className={"justify-center w-1/2"}
+              />
+            </div>
           </div>
         }
-        textClass={"items-start"}
+        textClass={
+          "items-start border border-pink-500 rounded[4px] p-[10%] bg-[white] bg-opacity-[10%]"
+        }
         extraText={
           <div className="flex flex-col gap-5">
             <small>Last updated on September 12, 2023</small>
@@ -485,7 +490,7 @@ export default function HomeView() {
             </p>
           </div>
         }
-        class_sect={"justify-between"}
+        class_sect={"justify-between relative gap-[4rem]"}
       />
 
       <footer className="flex flex-col gap-9 p-8 bg-[#100B20]">
