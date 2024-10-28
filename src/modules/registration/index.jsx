@@ -2,21 +2,11 @@ import React from "react";
 import ClickButton from "../../components/button";
 import Inputs from "../../components/inputs";
 import regImage from "../../assets/images/3d-graphic-designer-showing-thumbs-up-png 1.svg";
-import { Link } from "react-router-dom";
-import getLinked from "../../assets/images/getlinked.svg";
-import toggleBar from "../../assets/images/togglebar.svg";
 
 export default function Register() {
-  function openNav() {
-    console.log("open");
-  }
-  function closeNav() {
-    document.querySelector("nav").classList.add("hidden");
-  }
-
   return (
     <div className="bg-[#150E28] flex flex-col">
-      <div className="headNav py-2 w-full h-[10vh] flex justify-center gap-[35%] lg:items-center border px-[8%]">
+      {/* <div className="headNav py-2 w-full h-[10vh] flex justify-center gap-[35%] lg:items-center border px-[8%]">
         <div className="flex w-full justify-between items-center px-3">
           <div className="w-[30%]">
             <img src={getLinked} alt="" className="" />
@@ -61,14 +51,14 @@ export default function Register() {
             </div>
           </div>
         </nav>
-      </div>
+      </div> */}
 
-      <div className="body flex md:flex-row flex-col">
+      <div className="body flex md:flex-row flex-col items-center">
         <div className="md:w-1/2 h-[155px] md:h-[717px] flex justify-center items-center">
           <img src={regImage} alt="" className="h-full" />
         </div>
 
-        <div className="md:w-[740px] items-center justify-center md:h-[740px] md:relative right-[50px] flex text-[#FFFFFF] flex-col h-full gap-4">
+        <div className="md:w-[740px] border items-center justify-center md:h-[740px] md:relative right-[50px] flex text-[#FFFFFF] flex-col h-full gap-4">
           <div className="form-section flex flex-col justify-between w-full md:w-[558px] md:h-[610px] p-6 md:p-0">
             <div className="flex flex-col gap-8">
               <h2 className="font-bold text-[32px] text-fuchsia-500">

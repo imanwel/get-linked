@@ -8,7 +8,11 @@ import ClickButton from "../../components/button";
 import countdownTime from "../../assets/images/Countdown time.svg";
 import smartGlass from "../../assets/images/man-wearing-smart-glasses-touching-virtual-screen 1.svg";
 import idea from "../../assets/images/Image 1.svg";
+import arrow from "../../assets/images/arrow.svg";
 import theBigIdea from "../../assets/images/The big idea.svg";
+import ideaStar1 from "../../assets/images/pink star1.svg";
+import ideaStar2 from "../../assets/images/pink star2.svg";
+import ellipse from "../../assets/images/Ellipse 1.svg";
 // import { useNavigate } from "react-router-dom";
 import rulesImage from "../../assets/images/7450159 1.svg";
 import star1 from "../../assets/images/star1.svg";
@@ -19,6 +23,7 @@ import Attribute from "../../components/attributes";
 import questions from "../../assets/images/cwok_casual_21 1.svg";
 import flare1 from "../../assets/images/Purple-Lens-Flare1.svg";
 import flare2 from "../../assets/images/Purple-Lens-Flare2.svg";
+import flare3 from "../../assets/images/Purple-Lens-Flare3.svg";
 import Timeline from "../../assets/images/Timeline.svg";
 import cup from "../../assets/images/cup.svg";
 import Rewards from "../../assets/images/Rewards.svg";
@@ -32,6 +37,8 @@ import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { LuPhoneCall } from "react-icons/lu";
+import { FaLocationDot } from "react-icons/fa6";
 
 export default function HomeView() {
   // const navigate = useNavigate();
@@ -51,8 +58,8 @@ export default function HomeView() {
   // }
 
   return (
-    <div className="h-full">
-      <img src={line1} alt="" className="border-b" />
+    <div className="h-full flex flex-col relative border-t">
+      {/* <img src={line1} alt="" className="" /> */}
 
       <div className="border-b flex flex-col">
         <div className="flex flex-col items-end p-5">
@@ -69,15 +76,15 @@ export default function HomeView() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row relative">
+        <div className="flex flex-col md:flex-row">
           <img
             src={flare1}
             alt=""
-            className="absolute bottom-0 opacity-[50%]"
+            className="absolute bottom-[40%] left-[0%] opacity-[50%]"
           />
 
           <div className="md:w-1/2">
-            <div className="p-5 md:p-0 flex flex-col gap-5 justify-center items-center md:items-start md:relative md:left-[18%] ">
+            <div className="p-5 md:p-0 flex flex-col gap-12 justify-center items-center md:items-start md:relative md:left-[18%] ">
               <div className="relative">
                 <div className="">
                   <img
@@ -89,7 +96,7 @@ export default function HomeView() {
                   <img
                     src={star2}
                     alt=""
-                    className="absolute top-[6%] right-0 opacity-[75%]"
+                    className="absolute top-0 right-0 opacity-[75%]"
                   />
 
                   <img src={titleImage} alt="" className="w-[722px]" />
@@ -108,13 +115,19 @@ export default function HomeView() {
                   <ClickButton
                     message={"Register"}
                     buttonLocation={"/reg"}
-                    className={"cursor-pointer"}
+                    className={"cursor-pointer w-1/2"}
                   />
                   {/* </div> */}
                 </div>
               </div>
 
-              <div className="md:my-4 w-[291px] h-[85px]">
+              <div className="md:my-4 w-[291px] h-[85px] relative">
+                <img
+                  src={star2}
+                  alt=""
+                  className="absolute bottom-[100%] right-[-100px] opacity-[75%]"
+                />
+
                 <img src={countdownTime} alt="" />
               </div>
             </div>
@@ -132,15 +145,15 @@ export default function HomeView() {
 
             <div className="relative">
               <img
-                src={idea}
+                src={smartGlass}
                 alt=""
-                className="w-[83%] absolute bottom-[13%] left-[9%] "
+                className="border border-transparent mix-blend-luminosity"
               />
 
               <img
-                src={smartGlass}
+                src={idea}
                 alt=""
-                className="border border-transparent"
+                className="w-[83%] absolute bottom-[13%] left-[9%] mix-blend-hard-light"
               />
             </div>
           </div>
@@ -150,44 +163,106 @@ export default function HomeView() {
       <Detail
         addClassname={"border-b"}
         image={theBigIdea}
-        imageDiv={"p-[5%]"}
+        extraImage={
+          <div className="flex items-end">
+            <img src={ideaStar1} alt="" className="absolute top-[35%] left-0" />
+            <img src={arrow} alt="" className="absolute right-0" />
+          </div>
+        }
+        // extraImgClass={"relative"}
+        imageDiv={"relative"}
         imageClass={""}
         heading={" Introduction to getlinked"}
         spanHead={"tech Hackathon 1.0"}
-        titleClass={"border"}
+        titleClass={""}
         textContent={`Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding
             genius, a design maverick, or a concept wizard, you'll have the
             chance to transform your ideas into reality. Solving real-world
             problems, pushing the boundaries of technology, and creating
             solutions that can change the world, that's what we're all about!`}
+        extraText={
+          <div className="absolute right-0 top-[25%]">
+            <img src={ideaStar2} alt="" />
+          </div>
+        }
+        nextClass={"relative"}
       />
 
       <Detail
         addClassname={"md:flex-row-reverse md:h-[664px] border-b"}
         image={rulesImage}
+        extraImage={
+          <div className="">
+            <img
+              src={star1}
+              alt=""
+              className="absolute right-[97%] bottom-[23%]"
+            />
+
+            <img
+              src={ellipse}
+              alt=""
+              className="absolute right-[12%] top-[3%]"
+            />
+          </div>
+        }
         imageDiv={"md:relative items-center"}
-        imageClass={"md:absolute top-[-52px] md:w-[664px] md:h-[664px]"}
+        imageClass={"md:relative top-[-52px] md:w-[664px] md:h-[664px]"}
         heading={"Rules and"}
         spanHead={"Guidelines"}
-        titleClass={"border"}
+        titleClass={""}
         textContent={`Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding
             genius, a design maverick, or a concept wizard, you'll have the
             chance to transform your ideas into reality. Solving real-world
             problems, pushing the boundaries of technology, and creating
             solutions that can change the world, that's what we're all about!`}
         textClass={""}
+        extraText={
+          <div className="absolute left-[50%] top[20%]">
+            <img src={star2} alt="" />
+            <img src={flare3} alt="" />
+          </div>
+        }
+        class_sect={"relative"}
       />
 
       <Detail
         addClassname={"border-b py-[35px] md:py-0"}
         image={keyAttributes}
-        imageDiv={""}
-        imageClass={""}
+        extraImage={
+          <div className="">
+            <img
+              src={ideaStar1}
+              alt=""
+              className="absolute top-[5%] left-[20%]"
+            />
+
+            <img
+              src={ellipse}
+              alt=""
+              className="w-[20%] absolute left-[13%] top-[13%]"
+            />
+
+            <img
+              src={star2}
+              alt=""
+              className="absolute bottom-[45%] right-[35%]"
+            />
+          </div>
+        }
+        imageDiv={"relative"}
+        imageClass={"relative"}
         heading={"Judging Criteria"}
         spanHead={" Key attributes"}
-        titleClass={"border"}
+        titleClass={""}
         textContent={
           <div className="flex flex-col gap-5">
+            <img
+              src={star1}
+              alt=""
+              className="absolute bottom-[4%] left-[-50px]"
+            />
+
             <Attribute
               span={"Innovation and Creativity"}
               text=": Evaluate the uniqueness
@@ -227,6 +302,7 @@ export default function HomeView() {
             <ClickButton message={"Read More"} />
           </div>
         }
+        class_sect={"relative"}
       />
 
       <Detail
@@ -236,47 +312,51 @@ export default function HomeView() {
         imageClass={""}
         heading={"Frequently Ask"}
         spanHead={"Question"}
-        titleClass={"border"}
+        titleClass={""}
         textContent={
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-[4rem]">
             <div className="w-[75%]">
               We got answers to the questions that you might want to ask about{" "}
               <span>getlinked Hackathon 1.0</span>{" "}
             </div>
 
-            <Attribute
-              extraDiv={true}
-              questions={
-                "Can I work on a project I started before the hackathon?"
-              }
-            />
+            <div className="attribute flex flex-col gap-6">
+              <Attribute
+                extraDiv={true}
+                questions={
+                  "Can I work on a project I started before the hackathon?"
+                }
+              />
 
-            <Attribute
-              extraDiv={true}
-              questions={"What happens if I need help during the hackathon?"}
-            />
+              <Attribute
+                extraDiv={true}
+                questions={"What happens if I need help during the hackathon?"}
+              />
 
-            <Attribute
-              extraDiv={true}
-              questions={"What happens if I don't have an idea for a project?"}
-            />
+              <Attribute
+                extraDiv={true}
+                questions={
+                  "What happens if I don't have an idea for a project?"
+                }
+              />
 
-            <Attribute
-              extraDiv={true}
-              questions={"Can I join a team of do I have to come with one?"}
-            />
+              <Attribute
+                extraDiv={true}
+                questions={"Can I join a team of do I have to come with one?"}
+              />
 
-            <Attribute
-              extraDiv={true}
-              questions={"What happens after the Hackathon ends?"}
-            />
+              <Attribute
+                extraDiv={true}
+                questions={"What happens after the Hackathon ends?"}
+              />
 
-            <Attribute
-              extraDiv={true}
-              questions={
-                "Can I work on a project I started before the Hackathon?"
-              }
-            />
+              <Attribute
+                extraDiv={true}
+                questions={
+                  "Can I work on a project I started before the Hackathon?"
+                }
+              />
+            </div>
           </div>
         }
       />
@@ -287,9 +367,9 @@ export default function HomeView() {
           event.
         </p>
 
-        <div className="">
+        {/* <div className="">
           <h2>Timeline</h2>
-          <p>
+          <p >
             Here is the breakdown of the time we anticipate using for the
             upcoming event.
           </p>
@@ -297,7 +377,8 @@ export default function HomeView() {
             <div className="lines"></div>
             <div className=""></div>
           </div>
-        </div>
+        </div> */}
+
         <img src={Timeline} alt="" />
       </div>
 
@@ -308,7 +389,7 @@ export default function HomeView() {
         imageClass={""}
         heading={"Prizes and"}
         spanHead={"Rewards"}
-        titleClass={"border"}
+        titleClass={""}
         textContent={
           <div>
             <img src={Rewards} alt="" />
@@ -317,32 +398,37 @@ export default function HomeView() {
         extraText={
           "Highlight of the prizes of rewards for winners and for participants."
         }
-        class_sect={"items-center relative top-[-40px]"}
+        class_sect={"items-center gap-[3rem] relative top-[-40px]"}
         nextClass={"md:w-[65%]"}
       />
 
       <Detail
         addClassname={"flex-col-reverse md:flex-col-reverse"}
         image={sponsors}
-        imageDiv={"md:w-full border"}
+        imageDiv={"md:w-full"}
         imageClass={""}
         heading={"Partners and Sponsors"}
         spanHead={""}
-        titleClass={"border "}
+        titleClass={""}
         textContent={<div>{/* <img src={Rewards} alt="" /> */}</div>}
         extraText={
           "Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors"
         }
-        class_sect={"border md:w-full gap-0 items-center"}
+        class_sect={"md:w-full gap-0 items-center"}
         nextClass={"md:w-[45%] items-center text-center leading-[27.5px]"}
       />
 
       <Detail
-        addClassname={"border-y md:flex-row-reverse justify-end"}
+        addClassname={"border-y md:flex-row-reverse justify-end relative"}
         image={privacy}
-        extraImage={privacyShield}
-        imageDiv={"flex-col relative"}
-        imageClass={"relative w-[75%]"}
+        extraImage={
+          <div className="absolute w-[65%] bottom-[42%] right-[13%]">
+            <img src={privacyShield} alt="" />
+          </div>
+        }
+        extraImgClass={""}
+        imageDiv={"flex-col relative top-[45px] items-center"}
+        imageClass={"relative w-[70%]"}
         heading={"Privacy Poliicy and"}
         spanHead={"Terms"}
         titleClass={"border"}
@@ -402,29 +488,29 @@ export default function HomeView() {
         class_sect={"justify-between"}
       />
 
-      <footer className="flex flex-col gap-5 p-8 border">
-        <div className="flex">
+      <footer className="flex flex-col gap-9 p-8 bg-[#100B20]">
+        <div className="flex flex-col md:flex-row gap-[10%]">
           {" "}
-          <div className="md:w-1/2 border flex md:flex-col gap-9">
-            <div className="flex flex-col gap-3">
+          <div className="md:w-1/2 flex md:flex-col gap-9 items-center">
+            <div className="flex flex-col gap-3 w-[85%] h-full justify-between">
               <div className="">
                 <img src={getLinked} alt="" className="" />
               </div>
 
-              <p>
+              <p className="">
                 Getlinked Tech Hackathon is a technology innovation program
                 established by a group of organizations with the aim of
                 showcasing young and talented individuals in the field of
-                technology{" "}
+                technology
               </p>
-            </div>
 
-            <div className="">
-              <img src={termsOfUse} alt="" />
+              <div className="">
+                <img src={termsOfUse} alt="" />
+              </div>
             </div>
           </div>
-          <div className="flex w-1/2 border font-semibold">
-            <div className="flex flex-col justify-between">
+          <div className="flex flex-col md:flex-row md:w-1/2 font-[500] justify-between gap-4 px-5">
+            <div className="flex flex-col justify-between w-1/2">
               <ul className="flex flex-col gap-1">
                 <p className="text-[#D434FE]">Useful Links</p>
 
@@ -434,7 +520,7 @@ export default function HomeView() {
                 <li>Register</li>
               </ul>
 
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-3 items-center">
                 {" "}
                 <p className="text-[#D434FE]">Follow us</p>
                 <div className="flex gap-2">
@@ -446,7 +532,25 @@ export default function HomeView() {
               </div>
             </div>
 
-            <div className=""></div>
+            <div className="flex flex-col gap-4 w-1/2 px-5">
+              <p className="text-[#D434FE]">Contact us</p>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex gap-3 ">
+                  <LuPhoneCall className="h-full w-[8%]" />
+
+                  <p>+234 679 81819</p>
+                </div>
+
+                <div className="flex gap-3 ">
+                  <FaLocationDot className="h-full w-[8%]" />
+
+                  <p className="text-center">
+                    27,Alara Street Yaba 100012 Lagos State
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

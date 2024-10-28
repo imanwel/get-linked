@@ -20,8 +20,8 @@ export default function Homepage() {
   }
 
   return (
-    <div className="bg-[#150E28] w-full h-full flex flex-col gap-4">
-      <div className="headNav px-[8%] py-2 w-full md:h-full flex justify-center gap-[35%] md:items-center relative">
+    <div className="bg-[#150E28] w-full h-screen flex flex-col overflow-auto">
+      <div className="headNav px-[8%] py-6 w-full flex justify-center gap-[35%] md:items-center relative z-50">
         <div className="flex w-full justify-between items-center px-3">
           <div className="">
             <img src={getLinked} alt="" className="w-[70%]" />
@@ -48,7 +48,7 @@ export default function Homepage() {
           <div className="flex flex-col md:flex-row md:items-center gap-12 ">
             <ul className="flex flex-col md:flex-row gap-3 lg:gap-8 font-semibold">
               <li className="text-[#FFFFFF]">
-                <Link>Timeline</Link>
+                <Link to={"/"}>Timeline</Link>
               </li>
               <li className="text-[#FFFFFF]">
                 <Link>Overview</Link>
@@ -57,18 +57,18 @@ export default function Homepage() {
                 <Link>FAQs</Link>
               </li>
               <li className="bg-gradient-to-r from-[#9A39FF] to-[#FF29B9] bg-clip-text text-transparent">
-                <Link>Contact</Link>
+                <Link to={"/contact"}>Contact</Link>
               </li>
             </ul>
 
             <div className="w-[70%] md:w-[30%]">
-              <ClickButton message={"Register"} />
+              <ClickButton message={"Register"} buttonLocation={"/reg"} />
             </div>
           </div>
         </nav>
       </div>
 
-      <div className="text-white">
+      <div className="text-white w-full h-full flex items-center justify-center">
         <Outlet />
       </div>
     </div>

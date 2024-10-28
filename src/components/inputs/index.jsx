@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Inputs({ label, id, type, placeholder, htmlFor }) {
   return (
-    <div className="flex flex-col md:w-[47%]">
+    <div className="flex flex-col md:w-full">
       <label htmlFor={htmlFor}>{label}</label>
       <input
         type={type}

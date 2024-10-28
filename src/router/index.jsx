@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Register from "../modules/registration";
 import HomePage from "../modules/Home";
 import HomeView from "../modules/homeView";
+import Contact from "../modules/contact";
 
 export default function GetLinkedRouter() {
   const routes = createBrowserRouter([
@@ -14,11 +15,15 @@ export default function GetLinkedRouter() {
           index: true,
           element: <HomeView />,
         },
+        {
+          path: "contact",
+          element: <Contact />,
+        },
+        {
+          path: "reg",
+          element: <Register />,
+        },
       ],
-    },
-    {
-      path: "reg",
-      element: <Register />,
     },
   ]);
 

@@ -10,6 +10,7 @@ export default function Detail({
   imageClass,
   imageDiv,
   extraImage,
+  extraImgClass,
   titleClass,
   extraText,
   class_sect,
@@ -20,17 +21,15 @@ export default function Detail({
       className={`flex flex-col md:flex-row md:p-10 md:px-16 w-full ${addClassname}`}
     >
       <div className={`flex justify-center md:w-1/2 ${imageDiv}`}>
-        <img
-          src={extraImage}
-          alt=""
-          className="absolute w-[70%] bottom-[42%] left-[7%]"
-        />
+        {/* <img src={extraImage} alt="" className={extraImgClass} /> */}
+
+        {extraImage}
 
         {<img src={image} alt="" className={imageClass} />}
       </div>
 
       <div
-        className={`md:w-1/2 flex flex-col gap-4 justify-center border p-6 ${class_sect}`}
+        className={`md:w-1/2 flex flex-col gap-4 justify-center p-[3%] ${class_sect}`}
       >
         <div className={`flex flex-col gap-[1rem] ${nextClass}`}>
           <div
@@ -40,11 +39,12 @@ export default function Detail({
             <span className="text-fuchsia-500">{spanHead}</span>
           </div>
 
-          <div className="">{extraText}</div>
+          {/* <div className="relative"></div> */}
+          {extraText}
         </div>
 
         <div
-          className={`font-sans text-[95%] text-[#FFFFFF] leading-[27.5px] ${textClass} font-[500]`}
+          className={`font-sans text-[#FFFFFF] leading-[27.5px] ${textClass}`}
         >
           {textContent}
         </div>

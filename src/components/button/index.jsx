@@ -9,11 +9,11 @@ export default function ClickButton({ message, className, buttonLocation }) {
   }
   return (
     <div
-      className={`text-white font-semibold w-full h-full flex items-center ${className}`}
+      className={`text-white font-semibold h-full flex items-center ${className}`}
     >
       <button
         onClick={Button}
-        className="bg-gradient-to-r from-[#9A39FF] to-[#FF29B9] p-2 rounded-[4px]"
+        className="bg-gradient-to-r from-[#9A39FF] to-[#FF29B9] p-2 rounded-[4px] w-full"
       >
         {message}
       </button>
