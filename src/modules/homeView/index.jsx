@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import line1 from "../../assets/images/Line 1.svg";
+// import line1 from "../../assets/images/Line 1.svg";
 import igniteWrite from "../../assets/images/Igniting a Revolution in HR Innovation.svg";
 import igniteLine from "../../assets/images/Vector 4.svg";
 import hackathonTitle from "../../assets/images/Title.svg";
@@ -58,10 +58,10 @@ export default function HomeView() {
   // }
 
   return (
-    <div className="h-full flex flex-col relative border-t">
+    <div className="h-full flex flex-col border-t">
       {/* <img src={line1} alt="" className="" /> */}
 
-      <div className="border-b flex flex-col">
+      <div className="border-b flex relative flex-col">
         <div className="flex flex-col items-end p-5">
           <div className="md:w-1/2">
             <img src={igniteWrite} alt="" />
@@ -80,7 +80,7 @@ export default function HomeView() {
           <img
             src={flare1}
             alt=""
-            className="absolute bottom-[40%] left-[0%] opacity-[50%]"
+            className="absolute md:bottom-[15%] md:left-[6%] h-full opacity-[45%]"
           />
 
           <div className="md:w-1/2">
@@ -90,13 +90,13 @@ export default function HomeView() {
                   <img
                     src={star1}
                     alt=""
-                    className="absolute top-[-30px] left-[50px]"
+                    className="absolute md:top-[-30px] md:left-[50px]"
                   />
 
                   <img
                     src={star2}
                     alt=""
-                    className="absolute top-0 right-0 opacity-[75%]"
+                    className="absolute md:top-0 md:right-0 opacity-[75%]"
                   />
 
                   <img src={titleImage} alt="" className="w-[722px]" />
@@ -125,7 +125,7 @@ export default function HomeView() {
                 <img
                   src={star2}
                   alt=""
-                  className="absolute bottom-[100%] right-[-100px] opacity-[75%]"
+                  className="absolute md:bottom-[100%] md:right-[-100px] opacity-[75%]"
                 />
 
                 <img src={countdownTime} alt="" />
@@ -133,7 +133,7 @@ export default function HomeView() {
             </div>
           </div>
 
-          <div className="md:w-1/2 relative">
+          <div className="md:w-1/2 md:relative">
             <img
               src={flare2}
               alt=""
@@ -189,25 +189,25 @@ export default function HomeView() {
       />
 
       <Detail
-        addClassname={"md:flex-row-reverse md:h-[664px] border-b"}
+        addClassname={"md:flex-row-reverse md:h-[664px] border-b relative"}
         image={rulesImage}
         extraImage={
           <div className="">
             <img
               src={star1}
               alt=""
-              className="absolute right-[97%] bottom-[23%]"
+              className="absolute md:right-[97%] md:bottom-[23%]"
             />
 
             <img
               src={ellipse}
               alt=""
-              className="absolute right-[12%] top-[3%]"
+              className="absolute right-[8%] bottom-[80%]"
             />
           </div>
         }
         imageDiv={"md:relative items-center"}
-        imageClass={"md:relative top-[-52px] md:w-[664px] md:h-[664px]"}
+        imageClass={"relative md:top-[-52px] md:w-[664px] md:h-[664px]"}
         heading={"Rules and"}
         spanHead={"Guidelines"}
         titleClass={""}
@@ -218,16 +218,20 @@ export default function HomeView() {
             solutions that can change the world, that's what we're all about!`}
         textClass={""}
         extraText={
-          <div className="absolute left-[50%] top[20%]">
-            <img src={star2} alt="" />
-            <img src={flare3} alt="" />
+          <div className="absolute right-[25%] top-[-95px] w-[1037px] opacity-[60%]">
+            <img
+              src={star2}
+              alt=""
+              className="relative left-[50%] top-[270px]"
+            />
+            <img src={flare3} alt="" className="" />
           </div>
         }
-        class_sect={"relative"}
+        class_sect={""}
       />
 
       <Detail
-        addClassname={"border-b py-[35px] md:py-0"}
+        addClassname={"border-b"}
         image={keyAttributes}
         extraImage={
           <div className="">
@@ -240,7 +244,7 @@ export default function HomeView() {
             <img
               src={ellipse}
               alt=""
-              className="w-[20%] absolute left-[13%] top-[13%]"
+              className="w-[20%] absolute left-[13%] top-[18%]"
             />
 
             <img
@@ -398,7 +402,7 @@ export default function HomeView() {
         extraText={
           "Highlight of the prizes of rewards for winners and for participants."
         }
-        class_sect={"items-center gap-[3rem] relative top-[-40px]"}
+        class_sect={"items-center gap-[3rem] md:relative top-[-40px]"}
         nextClass={"md:w-[65%]"}
       />
 
@@ -419,16 +423,16 @@ export default function HomeView() {
       />
 
       <Detail
-        addClassname={"border-y md:flex-row-reverse justify-end relative"}
+        addClassname={"border-t md:flex-row-reverse justify-end relative"}
         image={privacy}
         extraImage={
-          <div className="relative bottom-[15%]">
+          <div className="absolute top-0 right-0">
             <img src={privacyShield} alt="" />
           </div>
         }
         extraImgClass={""}
-        imageDiv={"relative flex-col items-center"}
-        imageClass={"absolute bottom-0 left-0 w-[90%]"}
+        imageDiv={"relative flex-col items-center p-5"}
+        imageClass={"relative right-[3%] top-[8%]"}
         heading={"Privacy Policy and"}
         spanHead={"Terms"}
         titleClass={""}
@@ -490,7 +494,7 @@ export default function HomeView() {
             </p>
           </div>
         }
-        class_sect={"justify-between relative gap-[4rem]"}
+        class_sect={"justify-between relative gap-[3rem]"}
       />
 
       <footer className="flex flex-col gap-9 p-8 bg-[#100B20]">
@@ -515,7 +519,7 @@ export default function HomeView() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row md:w-1/2 font-[500] justify-between gap-4 px-5">
-            <div className="flex flex-col justify-between w-1/2">
+            <div className="flex flex-col justify-between md:w-1/2">
               <ul className="flex flex-col gap-1">
                 <p className="text-[#D434FE]">Useful Links</p>
 
@@ -537,21 +541,21 @@ export default function HomeView() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 w-1/2 px-5">
+            <div className="flex flex-col gap-4 md:w-1/2 md:px-5">
               <p className="text-[#D434FE]">Contact us</p>
 
               <div className="flex flex-col gap-2">
                 <div className="flex gap-3 ">
-                  <LuPhoneCall className="h-full w-[8%]" />
+                  <LuPhoneCall className="h-full w-[10%]" />
 
                   <p>+234 679 81819</p>
                 </div>
 
                 <div className="flex gap-3 ">
-                  <FaLocationDot className="h-full w-[8%]" />
+                  <FaLocationDot className="h-full w-[10%]" />
 
                   <p className="text-center">
-                    27,Alara Street Yaba 100012 Lagos State
+                    27,Alara Street <br /> Yaba 100012 <br /> Lagos State
                   </p>
                 </div>
               </div>

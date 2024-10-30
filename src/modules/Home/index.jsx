@@ -68,7 +68,7 @@ export default function Homepage() {
         </nav>
       </div>
 
-      <div className="text-white w-full h-full flex items-center justify-center">
+      <div className="text-white w-full flex items-center justify-center">
         <Outlet />
       </div>
     </div>

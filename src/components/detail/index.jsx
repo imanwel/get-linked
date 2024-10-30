@@ -17,9 +17,7 @@ export default function Detail({
   nextClass,
 }) {
   return (
-    <div
-      className={`flex flex-col md:flex-row md:p-10 md:px-16 w-full ${addClassname}`}
-    >
+    <div className={`flex flex-col md:flex-row p-[8%] w-full ${addClassname}`}>
       <div className={`flex justify-center md:w-1/2 ${imageDiv}`}>
         {/* <img src={extraImage} alt="" className={extraImgClass} /> */}
 
