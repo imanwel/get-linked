@@ -1,6 +1,6 @@
 import React from "react";
 import getLinked from "../../assets/images/getlinked.svg";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import ClickButton from "../../components/button";
 import toggleBar from "../../assets/images/togglebar.svg";
 
@@ -18,6 +18,8 @@ export default function Homepage() {
     // document.querySelector("nav").classList.add("hidden");
     document.querySelector("nav").style.left = "387px";
   }
+
+  const { pathname } = useLocation();
 
   return (
     <div className="bg-[#150E28] w-full h-screen flex flex-col overflow-auto">
@@ -46,20 +48,33 @@ export default function Homepage() {
           </div>
 
           <div className="flex flex-col md:flex-row md:items-center gap-12 ">
-            <ul className="flex flex-col md:flex-row gap-3 lg:gap-8 font-semibold">
-              <li className="text-[#FFFFFF]">
-                <Link to={"/"}>Timeline</Link>
-              </li>
-              <li className="text-[#FFFFFF]">
-                <Link>Overview</Link>
-              </li>
-              <li className="text-[#FFFFFF]">
-                <Link>FAQs</Link>
-              </li>
-              <li className="bg-gradient-to-r from-[#9A39FF] to-[#FF29B9] bg-clip-text text-transparent">
-                <Link to={"/contact"}>Contact</Link>
-              </li>
-            </ul>
+            <div className="flex flex-col md:flex-row gap-3 lg:gap-8 font-semibold">
+              <Link
+                to={"/"}
+                className={`text-[#FFFFFF] ${
+                  pathname === "/"
+                    ? "bg-gradient-to-r from-[#9A39FF] to-[#FF29B9] bg-clip-text text-transparent"
+                    : ""
+                }`}
+              >
+                Timeline
+              </Link>
+
+              <Link className={`text-[#FFFFFF]`}>Overview</Link>
+
+              <Link className={`text-[#FFFFFF]`}>FAQs</Link>
+
+              <Link
+                to={"/contact"}
+                className={`text-[#FFFFFF] ${
+                  pathname === "/contact"
+                    ? "bg-gradient-to-r from-[#9A39FF] to-[#FF29B9] bg-clip-text text-transparent"
+                    : ""
+                }`}
+              >
+                Contact
+              </Link>
+            </div>
 
             <div className="w-[70%] md:w-[30%]">
               <ClickButton message={"Register"} buttonLocation={"/reg"} />

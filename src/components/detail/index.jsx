@@ -17,7 +17,9 @@ export default function Detail({
   nextClass,
 }) {
   return (
-    <div className={`flex flex-col md:flex-row p-[8%] w-full ${addClassname}`}>
+    <div
+      className={`flex flex-col md:flex-row p-[6%] w-full text-center md:text-left ${addClassname}`}
+    >
       <div className={`flex justify-center md:w-1/2 ${imageDiv}`}>
         {/* <img src={extraImage} alt="" className={extraImgClass} /> */}
 
@@ -31,7 +33,7 @@ export default function Detail({
       >
         <div className={`flex flex-col gap-[1rem] ${nextClass}`}>
           <div
-            className={`font-[clash Display] font-bold text-[32px] leading-[42.56px] ${titleClass}`}
+            className={`font-[clash Display] font-bold text-[25px] md:text-[32px] leading-[34.56px] md:leading-[42.56px] ${titleClass}`}
           >
             {heading} <br />{" "}
             <span className="text-fuchsia-500">{spanHead}</span>
